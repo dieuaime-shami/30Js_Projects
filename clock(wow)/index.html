@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Clock</title>
+</head>
+<body>
+  <div class="main_div">
+    <div class="seconds"></div>
+    <div class="minutes"></div>
+    <div class="hours"></div>
+    <img src="/images/clock.png" alt="" class="backGround">
+    <div class="middle"></div>
+  </div>
+</body>
+<script>
+  let secondsHand=document.querySelector(".seconds");
+  let minutesHand=document.querySelector(".minutes")
+  let hoursHand=document.querySelector(".hours")
+  function setData(){
+    let now= new Date();
+    //seconds
+    let seconds=now.getSeconds();
+    let secondsDegree=((seconds/60)*360)+270;
+   
+    secondsHand.style.transform=`rotate(${secondsDegree}deg)`;
+    //minutes
+    let minutes=now.getMinutes();
+    let minutesDegree=((minutes/60)*360)+270;
+    minutesHand.style.transform=`rotate(${minutesDegree}deg)`;
+    //hours
+    let hours=now.getHours();
+    let hoursDegree=((hours/12)*360)+270;
+    console.log(hoursDegree)
+    hoursHand.style.transform=`rotate(${hoursDegree}deg)`;
+  }
+  setInterval(setData,1000)
+</script>
+</html>
