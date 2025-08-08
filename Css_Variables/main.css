@@ -1,0 +1,28 @@
+:root{
+  --base:red;
+  --spacing:10px;
+  --blur:10px;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  text-align: center;
+  background-color:lightskyblue;
+  color: rgb(216, 232, 239);
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+}
+.controls{
+  margin-bottom: 50px;
+}
+img{
+  width: 40%;
+  padding: var(--spacing);
+  background-color:var(--base);
+  filter: blur(var(--blur));
+}
