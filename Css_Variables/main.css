@@ -19,12 +19,16 @@ body{
 }
 .controls{
   margin-bottom: 50px;
+  margin-top: 20px;
+  align-items: center;
+  
 }
 .js{
   color: var(--base);
 }
 img{
-  width: 40%;
+  width: 35%;
+
   padding: var(--spacing);
   background-color:var(--base);
   filter: blur(var(--blur));
