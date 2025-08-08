@@ -20,9 +20,16 @@ body{
 .controls{
   margin-bottom: 50px;
 }
+.js{
+  color: var(--base);
+}
 img{
   width: 40%;
   padding: var(--spacing);
   background-color:var(--base);
   filter: blur(var(--blur));
+}
+
+input{
+  width: 150px;
 }
